@@ -1,0 +1,248 @@
+.top-line {
+    height: 1px; /* Altura da linha */
+    background-color: rgb(172, 169, 169); /* Cor da linha */
+    width: 100%; /* Largura total da tela */
+    position: fixed; /* Fixa a linha no topo */
+    top: 80px; /* Alinha a linha um pouco abaixo do topo */
+    left: 0; /* Alinha à esquerda */
+    z-index: 1; /* Z-index menor para que o menu fique sobre ela */
+}
+.menu-lateral {
+    width: 200px; /* Largura do menu */
+    height: calc(100% - 60px); /* Altura total menos a altura da linha */
+    background: linear-gradient(to bottom, #000000, #0052cc); /* Degradê */
+    position: fixed; /* Fixa o menu na lateral */
+    top: 60px; /* Inicia o menu abaixo da linha */
+    left: 0; /* Alinha à esquerda */
+    color: white; /* Cor do texto */
+    z-index: 2; /* Z-index maior para garantir que fique acima da linha */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Estilos para o Menu Lateral */
+.menu-lateral {
+    width: 70px; /* Largura inicial estreita */
+    height: 100vh;
+    background: linear-gradient(to right, #000000, #00008b); /* Degradê de preto para azul */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start; /* Posiciona os itens à esquerda */
+    align-items: flex-start;
+    padding-top: 30px;
+    transition: width 0.3s ease; /* Transição suave para expansão */
+}
+
+/* Estilos para a Navegação */
+.navigation {
+    width: 100%;
+}
+
+.navigation ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+/* Estilo para os Itens */
+.navigation ul li {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; /* Alinhamento vertical dos ícones */
+    justify-content: flex-start; /* Ícones na esquerda */
+}
+
+/* Estilo para os Links */
+.navigation ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha o texto à esquerda */
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    transition: background 0.3s ease, color 0.3s ease; /* Transição suave para fundo e cor */
+    border-radius: 8px;
+}
+
+/* Estilo dos Ícones */
+.icon {
+    font-size: 24px;
+    color: #ffffff; /* Ícones brancos */
+    margin-left: 10px; /* Margem para posicionar corretamente */
+}
+
+/* Estilo para o Texto */
+.text {
+    display: none; /* Ocultar textos inicialmente */
+    margin-left: 15px; /* Espaçamento entre ícone e texto */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Transição para aparecer */
+}
+
+/* Quando o menu está expandido */
+.menu-lateral.active {
+    width: 250px; /* Expande a barra ao ser clicada */
+}
+
+/* Exibe o texto quando a barra está ativa */
+.menu-lateral.active .text {
+    display: inline-block;
+    opacity: 1;
+}
+
+.navigation ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo levemente destacado ao passar o mouse */
+}
+
+/* Estilo para os Itens de Lista */
+.navigation ul li {
+    width: 100%;
+    margin-bottom: 30px; /* Aumenta o espaçamento entre os itens */
+    display: flex;
+    align-items: center; /* Alinhamento vertical dos ícones */
+    justify-content: flex-start; /* Ícones na esquerda */
+}
+
+/* Ajuste para reduzir o espaçamento, se necessário */
+.navigation ul li a {
+    padding: 35px 10px; /* Ajusta o espaçamento interno dos links */
+}
+
+/* Quando o menu está expandido */
+.menu-lateral.active {
+    width: 250px; /* Expande a barra ao ser clicada */
+}
+
+.employee-info {
+    position: absolute; /* Para posicionar no canto superior direito */
+    top: -57px; /* Ajuste para cima */
+    right: 50px; /* Distância da direita */
+    display: flex; /* Usado para alinhar ícone e texto */
+    align-items: center; /* Alinha verticalmente */
+    font-size: 18px; /* Tamanho da fonte */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #282bc2; /* Cor do texto */
+}
+
+.employee-info i {
+    margin-left: 30px; /* Espaçamento entre texto e ícone */
+    color: hsl(0, 0%, 0%); /* Cor do ícone */
+    font-size: 45px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    height: 100%; /* Para garantir que o body ocupe toda a altura */
+    display: flex; /* Usado para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.caixote {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha os itens ao centro */
+    justify-content: center; /* Centraliza verticalmente */
+    height: calc(100vh - 60px); /* Altura total menos a altura do menu */
+    position: relative; /* Permite que a posição da caixa seja relativa ao seu contêiner pai */
+    margin-left: 500px; /* Espaçamento para a largura do menu lateral */
+}
+
+.caixona {
+    width: 1000px; /* Largura da caixa */
+    padding: 40px;
+    border: 1px solid #000080; /* Detalhe azul ao redor da caixa */
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Espaçamento acima da caixa */
+}
+
+.cadastrar {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000080; /* Azul escuro */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    text-align: center; /* Alinha o h1 ao centro */
+    width: 100%; /* Garante que ele ocupe toda a largura */
+    margin-top: 20px; /* Adiciona espaçamento acima do título */
+}
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+
+.input-group {
+    flex: 1;
+    margin-right: 20px;
+}
+
+
+.input-group label {
+    display: block;
+    font-size: 18px;
+    color: #000; /* Cor preta */
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-group input[type="file"] {
+    padding: 5px;
+}
+
+.button-group {
+    display: flex; /* Coloca os botões na horizontal */
+    flex-direction: row; /* Garante que a direção seja horizontal */
+    justify-content: flex-start; /* Alinha os botões no início da linha */
+    gap: 10px; /* Espaçamento horizontal entre os botões */
+    align-items: center; /* Centraliza os botões verticalmente */
+    margin-top: 30px; /* Adiciona espaço acima dos botões */
+}
+
+.input-row:last-of-type {
+    margin-bottom: 5px; /* Espaçamento adicional abaixo dos últimos inputs */
+}
+button {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.save-button {
+    background-color: #A51E1E; /* Cor do botão Salvar */
+    color: #fff;
+}
+
+.delete-button {
+    background: linear-gradient(to right, #000, #000080); /* Degradê preto com azul */
+    color: #fff;
+}

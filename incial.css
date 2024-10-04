@@ -1,0 +1,192 @@
+.top-line {
+    height: 1px; /* Altura da linha */
+    background-color: rgb(172, 169, 169); /* Cor da linha */
+    width: 100%; /* Largura total da tela */
+    position: fixed; /* Fixa a linha no topo */
+    top: 80px; /* Alinha a linha um pouco abaixo do topo */
+    left: 0; /* Alinha à esquerda */
+    z-index: 1; /* Z-index menor para que o menu fique sobre ela */
+}
+.menu-lateral {
+    width: 200px; /* Largura do menu */
+    height: calc(100% - 60px); /* Altura total menos a altura da linha */
+    background: linear-gradient(to bottom, #000000, #0052cc); /* Degradê */
+    position: fixed; /* Fixa o menu na lateral */
+    top: 60px; /* Inicia o menu abaixo da linha */
+    left: 0; /* Alinha à esquerda */
+    color: white; /* Cor do texto */
+    z-index: 2; /* Z-index maior para garantir que fique acima da linha */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Estilos para o Menu Lateral */
+.menu-lateral {
+    width: 100px; /* Largura inicial estreita */
+    height: 100vh;
+    background: linear-gradient(to right, #000000, #00008b); /* Degradê de preto para azul */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start; /* Posiciona os itens à esquerda */
+    align-items: flex-start;
+    padding-top: 30px;
+    transition: width 0.3s ease; /* Transição suave para expansão */
+}
+
+/* Estilos para a Navegação */
+.navigation {
+    width: 100%;
+}
+
+.navigation ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+/* Estilo para os Itens */
+.navigation ul li {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; /* Alinhamento vertical dos ícones */
+    justify-content: flex-start; /* Ícones na esquerda */
+}
+
+/* Estilo para os Links */
+.navigation ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha o texto à esquerda */
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    transition: background 0.3s ease, color 0.3s ease; /* Transição suave para fundo e cor */
+    border-radius: 8px;
+}
+
+/* Estilo dos Ícones */
+.icon {
+    font-size: 24px;
+    color: #ffffff; /* Ícones brancos */
+    margin-left: 10px; /* Margem para posicionar corretamente */
+}
+
+/* Estilo para o Texto */
+.text {
+    display: none; /* Ocultar textos inicialmente */
+    margin-left: 15px; /* Espaçamento entre ícone e texto */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Transição para aparecer */
+}
+
+/* Quando o menu está expandido */
+.menu-lateral.active {
+    width: 250px; /* Expande a barra ao ser clicada */
+}
+
+/* Exibe o texto quando a barra está ativa */
+.menu-lateral.active .text {
+    display: inline-block;
+    opacity: 1;
+}
+
+.navigation ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo levemente destacado ao passar o mouse */
+}
+
+/* Estilo para os Itens de Lista */
+.navigation ul li {
+    width: 100%;
+    margin-bottom: 30px; /* Aumenta o espaçamento entre os itens */
+    display: flex;
+    align-items: center; /* Alinhamento vertical dos ícones */
+    justify-content: flex-start; /* Ícones na esquerda */
+}
+
+/* Ajuste para reduzir o espaçamento, se necessário */
+.navigation ul li a {
+    padding: 35px 10px; /* Ajusta o espaçamento interno dos links */
+}
+
+/* Quando o menu está expandido */
+.menu-lateral.active {
+    width: 250px; /* Expande a barra ao ser clicada */
+}
+
+/* Exibe o texto quando a barra está ativa */
+.menu-lateral.active .text {
+    display: inline-block;
+    opacity: 1;
+}
+/* Estilos para o Grid */
+.grid-container {
+    display: flex; /* Usa flexbox para alinhar os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens no container */
+    margin-top: 300px; /* Espaçamento superior para afastar do topo */
+}
+
+/* Estilo para cada item da grade */
+.grid-item {
+    background-color: white; /* Cor de fundo dos botões */
+    border: none; /* Remove a borda padrão dos botões */
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    padding: 80px; /* Aumenta o espaçamento interno */
+    margin: 0 30px; /* Aumenta o espaço horizontal entre os itens */
+    text-align: center; /* Centraliza o texto dentro dos botões */
+    flex: 0 0 130px; /* Define largura fixa para cada botão */
+    cursor: pointer; /* Altera o cursor para indicar que é um botão */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.grid-item:hover {
+    background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+}
+
+.grid-item i {
+    font-size: 80px; /* Aumenta o tamanho do ícone */
+    color: #0052cc; /* Cor do ícone */
+}
+
+.grid-item p {
+    margin-top: 10px; /* Espaço acima do texto */
+    color: #000000; /* Cor do texto */
+    font-weight: bold; /* Texto em negrito */
+    
+}
+body {
+    margin: 0; /* Remove margens padrão */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    position: relative; /* Para posicionamento absoluto */
+}
+
+.employee-info {
+    position: absolute; /* Para posicionar no canto superior direito */
+    top: -57px; /* Ajuste para cima */
+    right: 50px; /* Distância da direita */
+    display: flex; /* Usado para alinhar ícone e texto */
+    align-items: center; /* Alinha verticalmente */
+    font-size: 18px; /* Tamanho da fonte */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #282bc2; /* Cor do texto */
+}
+
+.employee-info i {
+    margin-left: 30px; /* Espaçamento entre texto e ícone */
+    color: hsl(0, 0%, 0%); /* Cor do ícone */
+    font-size: 45px;
+}
+

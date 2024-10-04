@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Tela de login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+ <body>
+
+    <div class="top-bar"></div> <!-- Listra azul e preta no topo -->
+
+    <div class="login-container">
+        <h1 class="login-title">Login</h1>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="matricula">Número de Matrícula ou CPF</label>
+                <input type="text" id="matricula" placeholder="Número de Matrícula ou CPF" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Senha" required>
+                    <span class="toggle-password" id="togglePassword">👁️</span>
+                </div>
+            </div>
+
+            <!-- Div para Lembrar da senha e Esqueceu a senha separados -->
+            <div class="options-container">
+                <div class="remember-me">
+                    <label>
+                        <input type="checkbox" id="remember"> Lembrar da senha
+                    </label>
+                </div>
+                <div class="forgot-password">
+                    <span>Esqueceu a senha?</span>
+                </div>
+            </div>
+            <form id="loginForm" onsubmit="return handleLogin(event)">
+            <button type="submit" class="submit-btn">Entrar</button>
+            <p class="signup-text">Não tem conta? <a href="cadastro.html" class="signup-link">Cadastre-se</a></p>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

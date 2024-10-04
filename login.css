@@ -1,0 +1,141 @@
+
+/* Estilo global */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Listra azul e preta no topo */
+.top-bar {
+    width: 100%;
+    height: 40px; /* Altura menor para a listra */
+    background: linear-gradient(to right, #000000, #00008b); /* Degradê de preto para azul */
+    position: absolute;
+    top: 0;
+}
+
+/* Container de login com borda azul */
+.login-container {
+    width: 320px;
+    padding: 60px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #00008b; /* Detalhe azul ao redor */
+    text-align: center;
+    margin-top: 50px; /* Distância da listra */
+}
+
+/* Título "Login" */
+.login-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo dos grupos de entrada */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-size: 18px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilo dos inputs */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Placeholder com cor cinza */
+input::placeholder {
+    color: gray;
+}
+
+/* Estilo do ícone de olho dentro do input */
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: gray; /* Ícone cinza pequeno */
+}
+
+/* Opções (Lembrar senha e Esqueceu a senha) em divs separadas */
+.options-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para "Lembrar da senha" */
+.remember-me label {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 5px; /* Espaço entre o checkbox e o texto */
+}
+
+/* Estilo para "Esqueceu a senha?" */
+.forgot-password span {
+    font-size: 14px;
+    color: red; /* Esqueceu a senha em vermelho */
+    cursor: pointer;
+}
+
+/* Estilo do botão de submissão com degradê */
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #000000, #00008b); /* Degradê de preto para azul */
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+/* Texto de cadastro com link em azul */
+.signup-text {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.signup-link {
+    color: #00008b;
+    text-decoration: none;
+}
+
